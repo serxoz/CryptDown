@@ -25,7 +25,7 @@
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
 					aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
+				<span class="sr-only">Cambia la navegación</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -34,12 +34,12 @@
 				<i class="fa fa-lock fa-fw"></i> CryptDown
 			</a>
 			<F3:check if="{{ @ALIAS=='view' }}">
-				<p class="navbar-text hidden-xs">client-side encrypted Markdown pastes</p>
+				<p class="navbar-text hidden-xs">"pegados" con Markdown cifrados con AES en el lado del cliente</p>
 			</F3:check>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}" title="create encrypted paste"><i class="fa fa-plus-circle fa-fw"></i> Create New</a>
+				<li><a href="{{@SCHEME.'://'.@HOST.@BASE.'/'}}" title="create encrypted paste"><i class="fa fa-plus-circle fa-fw"></i> Nuevo</a>
 				</li>
 				<li><a href="#info" data-toggle="modal" data-target="#info"><i class="fa fa-info-circle fa-fw"></i> Info</a>
 				</li>
@@ -52,7 +52,7 @@
 	<F3:include href="{{ @sub_tmpl }}"/>
 	<hr>
 	<footer>
-		<p>&copy; {{ date('Y')}}, ikkez <span class="pull-right notice">{*Don't rely on this service. Data may be deleted anytime. *}Kittens get hurt if you abuse this service. </span></p>
+		<p>&copy; {{ date('Y')}}, ikkez <span class="pull-right notice">{*No te fies de este servicio. Los datos pueden borrarse en cualquier momento*}Los gatitos se lastiman si abusas de este servicio.</span></p>
 	</footer>
 </div>
 
@@ -65,12 +65,12 @@
 				<h4 class="modal-title" id="infoLabel">CryptDown Info</h4>
 			</div>
 			<div class="modal-body">
-				<p>CryptDown is a Microservice to store documents, pastes or code snippets, similar to pastebin.</p>
-				<p>CryptDown uses real 256bit AES encryption, which takes place directly in your browser. No plaintext
-					is ever being send. Nobody can help you when you loose an encryption password for a paste. Your
-					IP-Address will not be saved!</p>
+				<p>CryptDown es un Microservicio para almacenar documentos, pegados o fragmentos de código, similar a pastebin.</p>
+				<p>CryptDown usa cifrado real AES de 256bit, el cual se ejecuta directamente en tu navegador. Nunca se envía
+					texto plano. Nadie podrá ayudarte si pierdes la clave de cifrado de un "pegado". Tu 
+					dirección IP no se guardará!</p>
 
-				<p>CryptDown was build with the following great and free software:</p>
+				<p>CryptDown se ha construído con ayuda del siguiente software libre y fantástico:</p>
 				<p>
 				<a class="label label-info" href="http://fatfreeframework.com/" target="_blank">Fat-Free Framework (backend)</a>
 				<a class="label label-info" href="https://code.google.com/p/crypto-js/" target="_blank">CryptoJS</a>
@@ -82,12 +82,12 @@
 				<a class="label label-info" href="http://fontawesome.io/" target="_blank">font-awesome</a>
 				</p>
 				<p class="link-flip">
-				The <a href="https://thenounproject.com/term/document/14008/">encrypted document symbol</a> was made by <a href="https://thenounproject.com/Ilsur/">Ilsur Aptukov</a>.<br/>&nbsp;
+				El <a href="https://thenounproject.com/term/document/14008/">símbolo del documento cifrado</a> fue creado por <a href="https://thenounproject.com/Ilsur/">Ilsur Aptukov</a>.<br/>&nbsp;
 				</p>
-				<p id="infocopytext">&copy; {{ date('Y')}} - cryptdown.eu, made by <a href="http://ikkez.de" target="_blank">ikkez</a></p>
+				<p id="infocopytext">&copy; {{ date('Y')}} - cryptdown.eu, creado por <a href="http://ikkez.de" target="_blank">ikkez</a></p>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
 			</div>
 		</div>
 	</div>
